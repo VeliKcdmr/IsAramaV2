@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İş Arama</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" asp-controller="Jobs" asp-action="Index">
+                    <i class="bi bi-briefcase-fill me-1"></i> İş Arama
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container pt-2" style="margin-top:56px;">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top bg-white mt-4">
+        <div class="container py-3">
+            <div class="row align-items-center g-2">
+                <div class="col-md-4 d-none d-md-flex align-items-center gap-2">
+                    <i class="bi bi-briefcase-fill text-primary fs-4"></i>
+                    <div>
+                        <div class="fw-bold">İş Arama</div>
+                        <div class="text-muted small">İş ilanlarını takip et</div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block text-center">
+                    <span class="text-muted small">
+                        <i class="bi bi-database me-1"></i>Kariyer.net & İsinolsun.com verilerinden beslenmektedir
+                    </span>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end d-flex justify-content-center justify-content-md-end align-items-center gap-3">
+                    <span class="text-muted small d-none d-md-inline">
+                        <i class="bi bi-clock me-1"></i>Her gün güncellenir
+                    </span>
+                    <span class="text-muted small d-none d-md-inline">&copy; 2026 İşArama</span>
+                    <a class="d-md-none d-flex align-items-center gap-2 text-decoration-none text-dark" asp-controller="Jobs" asp-action="Index">
+                        <i class="bi bi-briefcase-fill text-primary fs-5"></i>
+                        <span class="fw-bold">İşArama</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

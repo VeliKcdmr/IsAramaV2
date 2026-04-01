@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+playwright
+camoufox
+beautifulsoup4
+lxml

@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="IsArama.Api/IsArama.Api.csproj" />
+  <Project Path="IsArama.Data/IsArama.Data.csproj" Id="8ce1d02b-6c69-4772-a169-67c09c2a2d8c" />
+  <Project Path="IsArama.Domain/IsArama.Domain.csproj" Id="9fe30caa-afa7-46ea-be51-5d400bd423f0" />
+  <Project Path="IsArama.Scraper/IsArama.Scraper.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="60dc4758-7db6-452a-9397-298e23553537">
+    <Build Project="false" />
+  </Project>
+  <Project Path="IsArama.Web/IsArama.Web.csproj" />
+</Solution>
