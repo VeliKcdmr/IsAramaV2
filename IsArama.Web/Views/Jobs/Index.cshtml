@@ -377,16 +377,6 @@
 
 @section Scripts {
     <script>
-        function adjustJobsHeight() {
-            const el = document.getElementById('jobs-scroll-area');
-            if (!el) return;
-            const top = el.getBoundingClientRect().top;
-            const footerH = document.querySelector('footer')?.offsetHeight || 0;
-            el.style.maxHeight = (window.innerHeight - top - footerH - 8) + 'px';
-        }
-        adjustJobsHeight();
-        window.addEventListener('resize', adjustJobsHeight);
-
         function applyFilter(param, value) {
             const url = new URL(window.location.href);
             url.searchParams.set('page', '1');

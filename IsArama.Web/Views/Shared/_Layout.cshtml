@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="utf-8" />
@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="bg-light pb-5">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow fixed-top">
             <div class="container">
-                <a class="navbar-brand fw-bold" asp-controller="Jobs" asp-action="Index">
-                    <i class="bi bi-briefcase-fill me-1"></i> İş Arama
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" asp-controller="Jobs" asp-action="Index">
+                    <i class="bi bi-briefcase-fill fs-5"></i>
+                    <span>İş Arama</span>
                 </a>
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <span class="text-white-50 small d-none d-md-inline">
+                        <i class="bi bi-database me-1"></i>kariyer.net &amp; isinolsun.com
+                    </span>
+                    <span class="badge bg-white text-primary fw-semibold d-none d-md-inline">
+                        <i class="bi bi-arrow-repeat me-1"></i>Günlük Güncellenir
+                    </span>
+                </div>
             </div>
         </nav>
     </header>
@@ -25,32 +34,40 @@
         </main>
     </div>
 
-    <footer class="border-top bg-white mt-4">
-        <div class="container py-3">
-            <div class="row align-items-center g-2">
-                <div class="col-md-4 d-none d-md-flex align-items-center gap-2">
-                    <i class="bi bi-briefcase-fill text-primary fs-4"></i>
-                    <div>
-                        <div class="fw-bold">İş Arama</div>
-                        <div class="text-muted small">İş ilanlarını takip et</div>
+    <footer class="bg-white border-top mt-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <i class="bi bi-briefcase-fill text-primary fs-5"></i>
+                        <span class="fw-bold fs-5">İş Arama</span>
+                    </div>
+                    <p class="text-muted small mb-0">Türkiye'nin önde gelen iş ilanı platformlarından toplanan ilanları tek ekranda takip edin.</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="fw-semibold mb-2 small text-uppercase text-muted">Veri Kaynakları</p>
+                    <div class="d-flex flex-column gap-1">
+                        <a href="https://www.kariyer.net" target="_blank" class="text-decoration-none text-muted small d-flex align-items-center gap-2">
+                            <img src="https://www.kariyer.net/favicon.ico" width="14" height="14" />
+                            kariyer.net
+                        </a>
+                        <a href="https://www.isinolsun.com" target="_blank" class="text-decoration-none text-muted small d-flex align-items-center gap-2">
+                            <img src="https://isinolsun.com/favicon.ico" width="14" height="14" />
+                            isinolsun.com
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-4 d-none d-md-block text-center">
-                    <span class="text-muted small">
-                        <i class="bi bi-database me-1"></i>Kariyer.net & İsinolsun.com verilerinden beslenmektedir
-                    </span>
-                </div>
-                <div class="col-12 col-md-4 text-center text-md-end d-flex justify-content-center justify-content-md-end align-items-center gap-3">
-                    <span class="text-muted small d-none d-md-inline">
-                        <i class="bi bi-clock me-1"></i>Her gün güncellenir
-                    </span>
-                    <span class="text-muted small d-none d-md-inline">&copy; 2026 İşArama</span>
-                    <a class="d-md-none d-flex align-items-center gap-2 text-decoration-none text-dark" asp-controller="Jobs" asp-action="Index">
-                        <i class="bi bi-briefcase-fill text-primary fs-5"></i>
-                        <span class="fw-bold">İşArama</span>
-                    </a>
+                <div class="col-md-4">
+                    <p class="fw-semibold mb-2 small text-uppercase text-muted">Bilgi</p>
+                    <ul class="list-unstyled text-muted small mb-0">
+                        <li class="mb-1"><i class="bi bi-arrow-repeat me-1"></i>Her gün otomatik güncellenir</li>
+                        <li class="mb-1"><i class="bi bi-funnel me-1"></i>Şehir, sektör ve çalışma modeline göre filtrele</li>
+                        <li><i class="bi bi-box-arrow-up-right me-1"></i>İlanlara kaynaktan ulaş</li>
+                    </ul>
                 </div>
             </div>
+            <hr class="my-3" />
+            <p class="text-center text-muted small mb-0">&copy; 2026 İşArama. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
