@@ -128,6 +128,7 @@ async def scrape_job_listings(page_number: int = 1) -> list[dict]:
             "work_type": work_type_el.get_text(strip=True) if work_type_el else "",
             "published_at": published_at,
             "logo_url": logo_url,
+            "source_id": 1,
         }
 
         if job["title"]:

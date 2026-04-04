@@ -117,7 +117,6 @@ public class JobsController : ControllerBase
             if (!string.IsNullOrEmpty(dto.CompanyLogo)) company.LogoUrl = dto.CompanyLogo;
             if (!string.IsNullOrEmpty(dto.CompanyFollowers)) company.Followers = dto.CompanyFollowers;
             if (!string.IsNullOrEmpty(dto.CompanyProfileUrl)) company.ProfileUrl = dto.CompanyProfileUrl;
-            if (!string.IsNullOrEmpty(dto.CompanyLogo) && string.IsNullOrEmpty(company.LogoUrl)) company.LogoUrl = dto.CompanyLogo;
         }
 
         // ExperienceLevel eşleştir
@@ -295,8 +294,6 @@ public class JobsController : ControllerBase
     {
         if (string.IsNullOrWhiteSpace(location)) return string.Empty;
         var city = location.Split('(')[0].Split('+')[0].Trim();
-        // "İstanbul(Avr.)" gibi durumlar için
-        city = city.Replace("(Avr.)", "").Replace("(Asya)", "").Trim();
         return city;
     }
 
